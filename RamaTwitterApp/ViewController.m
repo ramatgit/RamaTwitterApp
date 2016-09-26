@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BDBOAuth1SessionManager.h"
+#import "TwitterClient.h"
 
 @interface ViewController ()
 
@@ -23,5 +25,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)onLoginButton:(id)sender {
+
+    TwitterClient *myInstance = [TwitterClient sharedInstance];
+    [myInstance login];
+}
+
 
 @end
